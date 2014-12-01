@@ -1,0 +1,2 @@
+recursive-include bootstrap_markdown/static *
+recursive-include bootstrap_markdown/templates *

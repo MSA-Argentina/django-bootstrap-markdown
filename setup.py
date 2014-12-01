@@ -7,10 +7,11 @@ setup(
     packages = find_packages(),
     include_package_data=True,
     version = "1.0",
+    license = "BSD",
     description = "An useful editor wrapped up in bootstrap for your forms",
     author = "Leandro Poblet",
     author_email = "leandrodrhouse@gmail.com",
-    url = "http://leandropoblet.com/",
+    url = "https://github.com/MSA-Argentina/django-bootstrap-markdown",
     keywords = ["django", "markdown", "editor"],
     install_requires = ['django',],
     classifiers = [

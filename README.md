@@ -8,7 +8,7 @@ Installation
 
 You can install it by using ```pip```:
 ```
-pip install django-bootstrap-markdown
+pip install django-bootstrap-markdown-editor
 ```
 
 Then adding it in your ```INSTALLED_APPS``` inside your ```settings.py``` file:
@@ -85,6 +85,17 @@ content = forms.CharField(widget=MarkdownEditor(
 | icon | The icon library to use. Glyphicons (glyph) and Font Awesome (fa) are supported. In order to use Font Awesome properly, you'll need to [include Font Awesome stylesheet](http://fontawesome.io/get-started/) yourself. _(default: glyph)_ |
 | footer | **(string)** Footer dom. Can be string or callback. _(default: None)_ |
 | fullscreen | **(bool)** Enable the fullscreen mode. _(default: False)_ |
+
+Disclaimer
+----------
+
+This plugin does not handle the markdown rendering outside the widget itself. There are several libraries that can be used to achieve this:
+
+ - [Misaka](https://github.com/FSX/misaka)
+ - [Hoep (Based on Hoedown)](https://github.com/Anomareh/Hoep)
+ - [Markdown](https://github.com/waylan/Python-Markdown)
+ - [Markdown2](https://github.com/trentm/python-markdown2)
+ - [Mitsune](https://github.com/lepture/mistune)
 
 Contribute
 ----------

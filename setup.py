@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-MODULE_NAME = "django-bootstrap-markdown"
+MODULE_NAME = "django-bootstrap-markdown-editor"
 
 setup(
     name = MODULE_NAME,
@@ -12,6 +12,7 @@ setup(
     author = "Leandro Poblet",
     author_email = "leandrodrhouse@gmail.com",
     url = "https://github.com/MSA-Argentina/django-bootstrap-markdown",
+    download_url = 'https://github.com/MSA-Argentina/django-bootstrap-markdown/tarball/0.1',
     keywords = ["django", "markdown", "editor"],
     install_requires = ['django',],
     classifiers = [

@@ -80,8 +80,9 @@ content = forms.CharField(widget=MarkdownEditor(
 
 | Name | Description          |
 | ------------- | ----------- |
-| autofocus | Indicates that editor will focused after instantiated. (default: False) |
-| resize | Option to disable or change the resize property, possible values **none**, **both**, **horizontal**, **vertical**. **This is currently only supported on limited browsers.** _(default: none)_ |
+| id **(required)** | **(string)** The container ID. |
+| autofocus | **(bool)** Indicates that editor will focused after instantiated. _(default: False)_ |
+| resize | **(string)** Option to disable or change the resize property, possible values **none**, **both**, **horizontal**, **vertical**. **This is currently only supported on limited browsers.** _(default: none)_ |
 | icon | The icon library to use. Glyphicons (glyph) and Font Awesome (fa) are supported. In order to use Font Awesome properly, you'll need to [include Font Awesome stylesheet](http://fontawesome.io/get-started/) yourself. _(default: glyph)_ |
 | footer | **(string)** Footer dom. Can be string or callback. _(default: None)_ |
 | fullscreen | **(bool)** Enable the fullscreen mode. _(default: False)_ |

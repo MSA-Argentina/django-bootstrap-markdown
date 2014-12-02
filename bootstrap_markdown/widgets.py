@@ -32,5 +32,5 @@ class MarkdownEditor(forms.Textarea):
 
         return mark_safe(render_to_string('bootstrap_markdown/base_widget.html',
             {'boostrap_cdn': boostrap_cdn, 'locale': locale,
-            'id': name, 'opts': opts,
+            'id': self.attrs['id'], 'opts': opts,
             'element': super(MarkdownEditor, self).render(name, value, attrs)}))

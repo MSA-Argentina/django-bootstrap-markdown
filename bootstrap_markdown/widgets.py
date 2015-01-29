@@ -29,8 +29,10 @@ class MarkdownEditor(forms.Textarea):
             locale = 'bootstrap_markdown/locale/bootstrap-markdown.{}.js'\
                 .format(markdown_config['locale'])
             opts['locale'] = markdown_config['locale']
+        else:
+            locale = None
 
         return mark_safe(render_to_string('bootstrap_markdown/base_widget.html',
             {'boostrap_cdn': boostrap_cdn, 'locale': locale,
-            'id': name, 'opts': opts,
+            'id': self.attrs['id'], 'opts': opts,
             'element': super(MarkdownEditor, self).render(name, value, attrs)}))

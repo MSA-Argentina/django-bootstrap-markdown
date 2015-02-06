@@ -58,7 +58,7 @@ MARKDOWN_CONFIG = {
 | ------------- | ----------- |
 | width      | **(int/string)** Set the container's width by pixels (300) or percentage (100%). _(default: "100%")_ |
 | height     | **(int/string)** Set the container's height by pixels (300) or percentage (100%). _(default: 300)_ |
-| locale     | **(string)** Set the editor's language. Languages available: spanish (es), arabic (ar), german (de), french (fr), japanese (ja), korean (kr), norwegian (nb), dutch (nl), russian (ru), swedish (sv), turkish (tr), ukranian (ua), chinese (zh). _(default: none)_ |
+| locale     | **(string)** Set the editor's language. Languages available: spanish (es), arabic (ar), german (de), french (fr), japanese (ja), korean (kr), norwegian (nb), dutch (nl), russian (ru), swedish (sv), turkish (tr), ukranian (ua), chinese (zh), **new!** polish (pl). _(default: none)_ |
 | bootstrap_cdn | **(bool)** Use [bootstrapcdn](http://bootstrapcdn.com) to bring the stylesheet, jQuery and javascripts of the plugin. Else you can load them on your own. _(default: True)_ |
 
 

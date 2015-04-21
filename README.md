@@ -3,6 +3,11 @@ Django Bootstrap Markdown
 
 Django Bootstrap Markdown is a simple plugin that allows you to integrate the simple yet powerful [bootstrap-markdown](http://toopay.github.io/bootstrap-markdown/) into your django forms.
 
+Specifications
+--------------
+
+This has been tested in production in Django 1.6.10 in Python 3. This has also been tested in Python 2 and in Django 1.7.7 and 1.8 in development. If anything happens, please [open an issue](https://github.com/MSA-Argentina/django-bootstrap-markdown/issues) and I'll dig into it.
+
 Installation
 ------------
 

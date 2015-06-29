@@ -19,7 +19,7 @@ $(document).ready(function() {
     iconlibrary: "{{ opts.icon }}",
     {% if opts.locale %}language: "{{ opts.locale }}",{% endif %}
     footer: "{{ opts.footer }}",
-    fullscreen: {{ opts.fullscreen }}
+    fullscreen: { enable: {{ opts.fullscreen }} }
     };
     $('#{{ id }}').markdown(opts);
 });

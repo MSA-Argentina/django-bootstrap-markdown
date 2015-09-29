@@ -61,13 +61,22 @@ MARKDOWN_CONFIG = {
 
 | Name | Description          |
 | ------------- | ----------- |
+| autofocus | **(bool)** Indicates that editor will focused after instantiated. _(default: False)_ |
+| savable | **(bool)** Indicates that editor will have save button and action.  _(default: False)_ |
+| hideable | **(bool)** If set to true then the editor will be hidden on blur event. _(default: False)_ |
 | width      | **(int/string)** Set the container's width by pixels (300) or percentage (100%). _(default: "100%")_ |
 | height     | **(int/string)** Set the container's height by pixels (300) or percentage (100%). _(default: 300)_ |
+| resize | **(string)** Option to disable or change the resize property, possible values **none**, **both**, **horizontal**, **vertical**. **This is currently only supported on limited browsers.** _(default: none)_ |
+| icon | The icon library to use. Glyphicons (glyph) and Font Awesome (fa) are supported. In order to use Font Awesome properly, you'll need to [include Font Awesome stylesheet](http://fontawesome.io/get-started/) yourself. _(default: glyph)_ |
+| footer | **(string)** Footer dom. Can be string or callback. _(default: None)_ |
 | locale     | **(string)** Set the editor's language. Languages available: spanish (es), arabic (ar), german (de), french (fr), japanese (ja), korean (kr), norwegian (nb), dutch (nl), russian (ru), swedish (sv), turkish (tr), ukranian (ua), chinese (zh), **new!** polish (pl). _(default: none)_ |
+| hiddenButtons | **(string)** String of button names to be hidden.  _(default: "")_ |
+| disabledButtons | **(string)** String of button names to be disabled. _(default: "")_ |
+| fullscreen | **(bool)** Enable the fullscreen mode. _(default: False)_ |
 | bootstrap_cdn | **(bool)** Use [bootstrapcdn](http://bootstrapcdn.com) to bring the stylesheet, jQuery and javascripts of the plugin. Else you can load them on your own. _(default: True)_ |
 
-
-Or you can customize each widget:
+For each field you must provide an ``attrs`` dictionary with the **id** key (The container ID) and
+the override value for each option (except ``bootstrap_cdn``):
 
 ```python
 content = forms.CharField(widget=MarkdownEditor(
@@ -83,14 +92,6 @@ content = forms.CharField(widget=MarkdownEditor(
         }))
 ```
 
-| Name | Description          |
-| ------------- | ----------- |
-| id **(required)** | **(string)** The container ID. |
-| autofocus | **(bool)** Indicates that editor will focused after instantiated. _(default: False)_ |
-| resize | **(string)** Option to disable or change the resize property, possible values **none**, **both**, **horizontal**, **vertical**. **This is currently only supported on limited browsers.** _(default: none)_ |
-| icon | The icon library to use. Glyphicons (glyph) and Font Awesome (fa) are supported. In order to use Font Awesome properly, you'll need to [include Font Awesome stylesheet](http://fontawesome.io/get-started/) yourself. _(default: glyph)_ |
-| footer | **(string)** Footer dom. Can be string or callback. _(default: None)_ |
-| fullscreen | **(bool)** Enable the fullscreen mode. _(default: False)_ |
 
 Disclaimer
 ----------

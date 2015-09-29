@@ -1,3 +1,4 @@
+from copy import deepcopy
 from django import forms
 from django.utils.safestring import mark_safe
 from django.template.loader import render_to_string
@@ -8,27 +9,31 @@ __all__ = ['MarkdownEditor']
 class MarkdownEditor(forms.Textarea):
 
     def render(self, name, value, attrs=None):
+        
+        config = deepcopy(markdown_config)
+        config.update(self.attrs)
 
         opts = {
-            'autofocus': "true" if 'autofocus' in self.attrs else "false",
-            'width': self.attrs['width'] if 'width' in self.attrs\
-                                        else markdown_config['width'],
-            'height': self.attrs['height'] if 'height' in self.attrs\
-                                        else markdown_config['height'],
-            'resize': self.attrs['resize'] if 'resize' in self.attrs else "none",
-            'icon': self.attrs['icon'] if 'icon' in self.attrs else "glyph",
-            'footer': self.attrs['footer'] if 'footer' in self.attrs else "",
-            'fullscreen': "true" if 'fullscreen' in self.attrs else "false",
+            'autofocus': "true" if config.get('autofocus', False) else "false",
+            'savable': "true" if config.get('savable', False) else "false",
+            'hideable': "true" if config.get('hideable', False) else "false",
+            'width': config['width'],
+            'height': config['height'],
+            'resize': config.get('resize', "none"),
+            'icon': config.get('icon', "glyph"),
+            'footer': config.get('footer', ""),
+            'hiddenButtons': config.get('hiddenButtons', ""),
+            'disabledButtons': config.get('disabledButtons', ""),
+            'fullscreen': "true" if config.get('fullscreen', False) else "false",
             'locale': '',
         }
         boostrap_cdn = False
         if markdown_config['boostrap_cdn']:
             boostrap_cdn = True
 
-        if markdown_config['locale'] is not None:
-            locale = 'bootstrap_markdown/locale/bootstrap-markdown.{}.js'\
-                .format(markdown_config['locale'])
-            opts['locale'] = markdown_config['locale']
+        if config['locale'] is not None:
+            locale = 'bootstrap_markdown/locale/bootstrap-markdown.{}.js'.format(config['locale'])
+            opts['locale'] = config['locale']
         else:
             locale = None
 

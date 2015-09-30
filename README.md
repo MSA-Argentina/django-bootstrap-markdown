@@ -6,7 +6,7 @@ Django Bootstrap Markdown is a simple plugin that allows you to integrate the si
 Specifications
 --------------
 
-This has been tested in production in Django 1.6.10 in Python 3. This has also been tested in Python 2 and in Django 1.7.7 and 1.8 in development. If anything happens, please [open an issue](https://github.com/MSA-Argentina/django-bootstrap-markdown/issues) and I'll dig into it.
+This has been tested in production in Django 1.6.10 in Python 3. This has also been tested in Python 2 and in Django 1.7.10 and 1.8.4 in development, not yet tested in 1.9. If anything happens, please [open an issue](https://github.com/MSA-Argentina/django-bootstrap-markdown/issues) and I'll dig into it.
 
 Installation
 ------------
@@ -91,6 +91,8 @@ content = forms.CharField(widget=MarkdownEditor(
             'fullscreen': True
         }))
 ```
+
+**Note:** Django 1.8 now supports empty HTML5 values, meaning that if you pass ```'autofocus': False,``` will ignore it, you need to pass it as ```'autofocus': 'False',```.
 
 
 Disclaimer

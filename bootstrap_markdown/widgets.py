@@ -9,7 +9,7 @@ __all__ = ['MarkdownEditor']
 class MarkdownEditor(forms.Textarea):
 
     def render(self, name, value, attrs=None):
-        
+
         config = deepcopy(markdown_config)
         config.update(self.attrs)
 
@@ -24,7 +24,8 @@ class MarkdownEditor(forms.Textarea):
             'footer': config.get('footer', ""),
             'hiddenButtons': config.get('hiddenButtons', ""),
             'disabledButtons': config.get('disabledButtons', ""),
-            'fullscreen': "true" if config.get('fullscreen', False) else "false",
+            'fullscreen': "true" if\
+                               config.get('fullscreen', False) else "false",
             'locale': '',
         }
         boostrap_cdn = False
@@ -32,7 +33,8 @@ class MarkdownEditor(forms.Textarea):
             boostrap_cdn = True
 
         if config['locale'] is not None:
-            locale = 'bootstrap_markdown/locale/bootstrap-markdown.{}.js'.format(config['locale'])
+            locale = 'bootstrap_markdown/locale/'
+            locale += 'bootstrap-markdown.{}.js'.format(config['locale'])
             opts['locale'] = config['locale']
         else:
             locale = None

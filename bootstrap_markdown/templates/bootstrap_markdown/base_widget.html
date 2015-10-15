@@ -21,7 +21,7 @@ $(document).ready(function() {
     iconlibrary: "{{ opts.icon }}",
     footer: "{{ opts.footer }}",
     {% if opts.disabledButtons %}disabledButtons: "{{ opts.disabledButtons }}",{% endif %}
-    {% if opts.hiddenButtons %}disabledButtons: "{{ opts.hiddenButtons }}",{% endif %}
+    {% if opts.hiddenButtons %}hiddenButtons: "{{ opts.hiddenButtons }}",{% endif %}
     fullscreen: { enable: {{ opts.fullscreen }} },
     {% if opts.locale %}language: "{{ opts.locale }}",{% endif %}
     };
